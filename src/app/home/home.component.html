@@ -1,0 +1,21 @@
+<div>
+<h1 style="text-align: center;">
+  <img class="w3-image" src="https://www.w3schools.com/w3images/architect.jpg" alt="Architecture" width="1500" height="800" style="width: 1500px;height: 500px">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>iMAGINE</b></span> <span class="w3-hide-small w3-text-light-grey">APPLICATION</span></h1>
+  </div>
+</h1>
+</div>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px;">
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about" style="margin-left: 35%;">
+    <button (click)="gotoLogIn()" *ngIf="buttonSignIn()" class="btn btn-primary btn-lg" ><i class="fa fa-google" aria-hidden="true"></i> Sign-in with your Google Account</button>
+
+    <button [disabled]="true" *ngIf="buttonSignedIn()" class="btn btn-primary btn-lg" ><i class="fa fa-google" aria-hidden="true"></i> Signed-in as: {{gmail.username}}</button>
+
+  </div>
+<!-- End page content -->
+</div>

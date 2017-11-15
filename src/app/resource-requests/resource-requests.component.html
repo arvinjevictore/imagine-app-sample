@@ -1,0 +1,346 @@
+	<div id="myModalAdd" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Create Demand</h4>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<label>Project Details</label><br><br>
+						<div class="container">
+							<div class='col-md-4'>
+								<label>Client: </label>{{demandData.client}}<br><br>
+								<label>Engagement: </label>{{demandData.engagement}}<br><br>
+
+								<label>GCP Demand</label><br>
+								<label class="switch">
+									<input type="checkbox">
+									<span class="slider round"></span>
+								</label>
+							</div>
+
+							<div class='col-md-4'>
+								<label>Project: </label>{{demandData.project}}<br><br>
+								<label>Interaction Style: </label>{{demandData.interStyle}}<br><br>
+								<label>Demand Segmentation</label>
+								<select class="form-control" id="sel1" [(ngModel)]="demSegment">
+									<option value=""></option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+
+								</select>
+							</div>
+						</div>
+						<hr>
+						<br><br>
+
+						<label>Duration</label><br><br>
+						<div class="container">
+							<div class='col-md-4'>
+								<div class="form-group">
+									<label>Requested Start Date</label>
+									<div class='input-group date' id='datetimepicker6'>
+										
+										<input type='text' class="form-control" />
+										<span class="input-group-addon">
+											<span class="glyphicon glyphicon-calendar"></span>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class='col-md-4'>
+								<div class="form-group">
+									<label>End Date</label>
+									<div class='input-group date' id='datetimepicker7'>
+
+										<input type='text' class="form-control" />
+										<span class="input-group-addon">
+											<span class="glyphicon glyphicon-calendar"></span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr>
+						<br><br>
+
+						<label>Skills</label><br><br>
+						<div class="container">
+							<div class='col-md-4'>
+								<div class="form-group">
+									<label>Career Level</label>
+									<select class="form-control" id="sel1" [(ngModel)]="carLevel">
+										<option value=""></option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select><br><br>
+
+									<label>Primary Skill</label>
+									<select class="form-control" id="sel1" [(ngModel)]="priSkill">
+										<option value=""></option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select><br><br>
+
+									<label>Assigned Role</label>
+									<select class="form-control" id="sel1" [(ngModel)]="assignRole">
+										<option value=""></option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select><br><br>
+
+									<label>Career Group</label>
+									<select class="form-control" id="sel1" [(ngModel)]="carGroup">
+										<option value=""></option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select><br><br>
+
+									<label>Career Sub Group</label>
+									<select class="form-control" id="sel1" [(ngModel)]="carSubGroup">
+										<option value=""></option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select><br><br>
+
+									<label>Career Track</label>
+									<select class="form-control" id="sel1" [(ngModel)]="carTrack">
+										<option value=""></option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select><br><br>
+								</div>
+							</div>
+
+							<div class='col-md-4'>
+								<div class="form-group">
+									<label>ASE Demand Classification</label>
+									<select class="form-control" id="sel1" [(ngModel)]="demClass">
+										<option value=""></option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select><br><br>
+
+									<label>Assigned Role Description</label>
+									<textarea class="form-control" rows="5" id="comment" style="resize: none;" [(ngModel)]="assignRoleDescp"></textarea><br><br><br>
+
+									<label>No. of Demands</label>
+									<select class="form-control" id="sel1" [(ngModel)]="numDemands">
+										<option value=""></option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select><br><br>
+
+									<label>Job Requirements</label>
+									<textarea class="form-control" rows="5" id="comment" style="resize: none;" [(ngModel)]="jobReqs"></textarea><br><br>
+								</div>
+							</div>
+						</div>
+						<hr>
+						<br><br>
+
+						<label>Location</label><br><br>
+						<div class="container">
+							<div class='col-md-4'>
+								<div class="form-group">
+									<label>Source Location</label>
+									<select class="form-control" id="sel1" [(ngModel)]="srcLoc">
+										<option value=""></option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select><br><br>
+
+									<label>Work Location Flex</label>
+									<select class="form-control" id="sel1" [(ngModel)]="workLocFlex">
+										<option value=""></option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select><br><br>
+
+									<label>Demand Cluster</label>
+									<select class="form-control" id="sel1" [(ngModel)]="demCluster">
+										<option value=""></option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select><br><br>
+								</div>
+							</div>
+
+							<div class='col-md-4'>
+								<div class="form-group">
+									<label>Work Location</label>
+									<select class="form-control" id="sel1" [(ngModel)]="workLoc">
+										<option value=""></option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select><br><br>
+
+									<label>Metro City</label>
+									<select class="form-control" id="sel1" [(ngModel)]="metroCity">
+										<option value=""></option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select><br><br>
+
+									<div>
+										<div class='col-md-6'>
+											<!-- Rounded switch -->
+											<label>Onsite Component</label>
+											<label class="switch">
+												<input type="checkbox">
+												<span class="slider round"></span>
+											</label>
+										</div>
+
+										<div class='col-md-6'>										
+											<!-- Rounded switch -->
+											<label>GCP Demand</label>
+											<label class="switch">
+												<input type="checkbox">
+												<span class="slider round"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr>
+						<br><br>
+
+						<label>Demand Details</label><br><br>
+						<div class="container">
+							<div class='col-md-4'>
+								<div class="form-group">
+									<label>Priority</label>
+									<select class="form-control" id="sel1" [(ngModel)]="priority">
+										<option value=""></option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select><br><br>
+
+									<label>Win Probability</label>
+									<select class="form-control" id="sel1" [(ngModel)]="winProb">
+										<option value=""></option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select><br><br>
+
+									<label>Primary Contact (Enterprise ID only)</label>
+									<input type="text" class="form-control" id="usr" [(ngModel)]="primContact">
+
+
+								</div>
+							</div>
+
+							<div class='col-md-4'>
+								<div class="form-group">
+									<!-- Rounded switch -->
+									<label>Client Approval Required</label><br>
+									<label class="switch">
+										<input type="checkbox">
+										<span class="slider round"></span>
+									</label><br><br><br>
+
+									<!-- Rounded switch -->
+									<label>Client Interview Required</label><br>
+									<label class="switch">
+										<input type="checkbox">
+										<span class="slider round"></span>
+									</label><br><br>
+
+									<label>DCSO Granted</label><br>
+									<label class="switch">
+										<input type="checkbox">
+										<span class="slider round"></span>
+									</label>
+								</div>
+							</div>
+
+							<div class="col-md-12">
+								<i style="color:red;">Information related to onsite city OR restaffing OR any other comment can be captured here.<br>For Recruitment specific information please add job requirements field.</i><br><br>
+
+								<label>Comments (For internal use only)</label>
+								<textarea class="form-control" rows="5" id="comment" style="resize: none; width: 72%;" [(ngModel)]="comments" placeholder="Description" ></textarea>
+							</div>
+						</div>
+						<hr>
+
+						<div class="navbar-form navbar-right" >
+							<button  type="button" class="btn btn-info btn-lg" style="margin-top: 2%;float: right; padding: auto;">Create Demand</button>
+						</div>
+						<br><br>			
+
+					</div>
+				</div>
+				
+			</div>
+
+		</div>
+	</div>
+
+	<br><br>
+	<div class="navbar-form navbar-right" >
+		<button  type="button" class="btn btn-info btn-lg" style="margin-top: 2%;float: right; padding: auto;" data-toggle="modal" data-target="#myModalAdd" (click)="createDemand()" [disabled]="createDemandValidate()">Create</button>
+	</div>
+
+	<div class="navbar-form navbar-right" >
+		<select class="form-control" id="sel1" [(ngModel)]="srchprojName" style="width: 100%;">
+			<option value=""></option>
+			<option value="AMP Capital - SFDC">AMP Capital - SFDC</option>
+			<option value="Woolworths Bunch 2.0">Woolworths Bunch 2.0</option>
+			<option value="Myer Visa Card Enhancements">Myer Visa Card Enhancements</option>
+		</select>
+		<br>
+		<p style="color: grey;">Select a project to create your demand</p>
+	</div>
+
+	
+
+	<h1>
+		Resource Requests
+	</h1>
+	<hr>
+	<div class="nav navbar-nav navbar-left" id="record_table">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>RRD No.</th>
+					<th>Position Status</th>
+					<th>Project</th>
+					<th>Position</th>
+					<th>Level</th>
+					<th>Location</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let demand of demands" data-toggle="modal" data-target="#myModalItem"  (click)="dataForModal(demand)">
+					<td>{{ demand.rrdNo }}</td>
+					<td>{{ demand.posStat }}</td>
+					<td>{{ demand.project }}</td>
+					<td>{{ demand.position }}</td>
+					<td>{{ demand.level }}</td>
+					<td>{{ demand.location }}</td>
+
+				</tr>
+			</tbody>
+		</table>
+	</div>

@@ -1,0 +1,246 @@
+<!-- <h1>POSTS</h1>
+<div *ngFor="let post of posts">
+      <h4>{{post.title}}</h4><br>
+      {{post.body}}
+    </div> -->
+
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Filter</h4>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="sel1">Region:</label>
+              <select class="form-control" id="sel1" [(ngModel)]="regFilter">
+                <option value=""></option>
+                <option value="Region 1">Region 1</option>
+                <option value="Region 2">Region 2</option>
+                <option value="Region 3">Region 3</option>
+                <option value="Region 4">Region 4</option>
+              </select><br><br>
+
+              <label for="sel2">Technology:</label>
+              <select class="form-control" id="sel2" [(ngModel)]="techFilter">
+                <option value=""></option>
+                <option value="Technology 1">Technology 1</option>
+                <option value="Technology 2">Technology 2</option>
+                <option value="Technology 3">Technology 3</option>
+                <option value="Technology 4">Technology 4</option>
+              </select><br><br>
+
+              <label for="sel3">Status:</label>
+              <select class="form-control" id="sel3" [(ngModel)]="statFilter">
+                <option value=""></option>
+                <option value="Won">Won</option>
+                <option value="Active">Active</option>
+              </select>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info btn-md" data-dismiss="modal" (click)="saveFilter()" [disabled]="validateFilter()">Save</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="myModalItem" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Opportunity</h4>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <h1>{{modal.name}}</h1>
+              <hr>
+
+              <h3>Details</h3>
+              Region: <b>{{modal.reg}}</b><br>
+              Technology: <b>{{modal.tech}}</b><br>
+              Status: <b>{{modal.stat}}</b><br>
+              CCI: <b>N/A</b><br>
+              Net Revenue: <b>P 1,000,000.00</b>
+              <hr>
+
+              <h3>Organizational Chart</h3>
+              <div class="center">
+                <div *ngFor="let item of items" style="text-align: center;">
+                  <img class="image" src="{{item.img}}" style="width: 100%;max-width: 200px;">
+                  <br>
+                  <b>Name:</b> {{ item.name }}<br>
+                  <b>Position:</b> {{ item.pos }}<br>
+                  <b>Contact:</b> {{ item.email }}<br><br>
+                </div>
+              </div>
+              <hr>
+
+              <h3>Reports</h3>
+              <div class="center">
+                <canvas #barCanvas style="text-align: center;"></canvas>
+              </div>
+              <hr>
+
+              <div>
+                <h3>Timeline</h3>
+                <img src="http://www.pacificblue.co.uk/hs-fs/hub/31306/file-25659207-png/images/project_timeline.png" style="width: 100%"/>
+              </div>
+              <hr>
+
+              <div>
+                <h3>Software Architecture</h3>
+                <img src="https://readerman1.files.wordpress.com/2015/07/layered-software-architecture-04.png" style="width: 100%"/>
+              </div>
+              <hr>
+
+            </div>
+          </div>
+          <div class="modal-footer">
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div id="myModalAdd" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Add Opportunity</h4>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label>Opportunity Name: <b style="color:red;">*</b></label>
+              <input type="text" class="form-control" [(ngModel)]="crProjName">
+              <br><br>
+
+              <label for="sel1">Region: <b style="color:red;">*</b></label>
+              <select class="form-control" id="sel1" [(ngModel)]="crRegion">
+                <option value=""></option>
+                <option value="Region 1">Region 1</option>
+                <option value="Region 2">Region 2</option>
+                <option value="Region 3">Region 3</option>
+                <option value="Region 4">Region 4</option>
+              </select><br><br>
+
+              <label for="sel2">Technology: <b style="color:red;">*</b></label>
+              <select class="form-control" id="sel2" [(ngModel)]="crTechnology">
+                <option value=""></option>
+                <option value="Technology 1">Technology 1</option>
+                <option value="Technology 2">Technology 2</option>
+                <option value="Technology 3">Technology 3</option>
+                <option value="Technology 4">Technology 4</option>
+              </select><br><br>
+
+              <label for="sel3">Status: <b style="color:red;">*</b></label>
+              <select class="form-control" id="sel3" [(ngModel)]="crStatus" >
+                <option value=""></option>
+                <option value="Won">Won</option>
+                <option value="Active">Active</option>
+              </select><br><br>
+              <hr>
+
+              <label>DCSO Granted</label><br>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label><br><br>
+
+              <label>Timeline</label>
+              <input type="file">
+              <br>
+              <label>Technology Architecture</label>
+              <input type="file">
+
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info btn-md" data-dismiss="modal" (click)="saveRecord()" [disabled]="saveRecordValidate()">Save</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <br><br>
+    <!-- <div class="navbar-form navbar-right" >
+     <button  type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" *ngIf="filterFlag == 0">Filter</button>
+
+      <span class="glyphicon">&#xe234;</span>
+  </div>
+
+   <form class="navbar-form navbar-right">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search" (keyup)="getItems($event)" *ngIf="filterFlag == 0">
+      <button  type="button" class="btn btn-info btn-lg" *ngIf="filterFlag == 1" (click)="clearFilter()">Clear</button>
+    </div>
+  </form> -->
+
+  <div class="opportunity">
+  <button  type="button" class="btn btn-info btn-lg" style="margin-top: 2%;float: right; padding: auto;" data-toggle="modal" data-target="#myModalAdd" (click)="resetAddFields()" *ngIf="addButtonShow()">Create</button><br>
+  <h1>
+    LIST OF OPPORTUNITIES
+  </h1> 
+
+
+  <hr>
+
+  <div class="nav navbar-nav navbar-left" id="record_table">
+    <div class="navbar-form navbar-right" >
+     <button  type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal" *ngIf="filterFlag == 0">Filter</button>
+      <!-- &#xe234; -->
+      <span class="glyphicon"></span>
+    </div>
+
+   <form class="navbar-form navbar-right">
+    <div class="input-group">
+      <button  type="button" class="btn btn-info btn-lg" *ngIf="filterFlag == 1" (click)="clearFilter()">Clear</button>
+    </div>
+  </form>
+
+   <table class="table table-hover" style="overflow-x: auto;">
+    <thead>
+      <tr>
+        <th>Opportunity Name</th>
+        <th>Client Name</th>
+        <th>Class</th>
+        <th>WBS</th>
+        <th>Region</th>
+        <th>Technology</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let opp of opps" data-toggle="modal" data-target="#myModalItem"  (click)="dataForModal(opp)" >
+        <td>{{ opp.name }}</td>
+        <td>{{ opp.clientName }}</td>
+        <td>{{ opp.class }}</td>
+        <td>{{ opp.wbs }}</td>
+        <td>{{ opp.reg }}</td>
+        <td>{{ opp.tech }}</td>
+        <td>{{ opp.stat }}</td>
+        <!-- <td>
+          <button type="button" class="btn btn-info btn-xs" style="float: right; color: white;"><i class="material-icons">&#xe872;</i></button>
+          <button type="button" class="btn btn-info btn-xs" style="float: right; margin-right: 3%;color: white;"><i style="font-size:24px;" class="fa">&#xf044;</i></button>
+          <button data-toggle="modal" data-target="#myModalItem"  (click)="dataForModal(opp)" type="button" class="btn btn-info btn-xs" style="float: right; margin-right: 3%"><i style="font-size:24px" class="fa">&#xf039;</i></button></td> -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+  

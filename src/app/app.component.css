@@ -1,0 +1,151 @@
+.firstApp{
+	width:500px;
+	text-align: center;
+	margin:0 auto;
+	border: 2px solid #d7d7d7;
+	border-bottom: 0px;
+	margin-top: 20;
+
+}
+
+.addItem{
+	position: relative;
+	padding-bottom: 0px;
+	height: 30px;
+}
+
+.addText{
+	width:80%;
+	height:30px;
+	padding: 5px;
+	font-size: 20px; 
+}
+
+.addItem button{
+	height: 45px;
+	width: 50px;
+	padding: 5px;
+}
+
+span {
+	cursor: pointer;
+	position: relative;
+	float: right;
+	margin-right: 10px;
+}
+
+/* Style the tab */
+div.menuBar {
+   color:black;
+   text-align: center;
+}
+
+/* Style the buttons inside the tab */
+div.menuBar button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    height: 40%; 
+    overflow: hidden;
+    float: right;
+    width: 12%;
+}
+
+/* Change background color of buttons on hover */
+div.menuBar button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+div.menuBar button.active {
+    background-color: #ddd;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    border-top: none;
+    
+}
+
+.logo{
+	align-content: center;
+	max-width: 300px;
+	width:100%;
+	float: left;
+}
+
+.header{
+	max-width: 100%;
+	min-height: 200px;
+	height:100%;
+	text-align:center;
+	background-color: #5c8297;
+}
+
+.content{
+	max-width: 100%;
+	min-height: 550px;
+	height:100%;
+	background-color: #ddd;
+}
+
+.footer{
+	max-width: 100%;
+	min-height: 150px;
+	height:100%;
+	background-color: #5c8297;
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      height: 100%;
+      width: 100%;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {
+      height: 51em;
+      max-width: 1900px;
+    }
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #ffffff;
+      height: 100%;
+      width: 10%;
+      text-align: center;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+
+.text-left{
+  width: 90%;
+}
+
+.menulist{
+  width:100em;
+}
