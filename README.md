@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ImagineApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
@@ -26,3 +27,9 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+# imagine-app-sample
+Prototype for imagine app project.
+
+Practicing git commands and using repositories for projects.
+>>>>>>> e8d476805c0f2b7d2ef1319b40b637d7643424c5
